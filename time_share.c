@@ -50,6 +50,7 @@ void child_term_handler(int sig) {
 void child_cont_handler(int sig) {
     (void)sig;
     write(STDOUT_FILENO, msgbuf, strlen(msgbuf));
+}
 
 void shutdown_handler(int sig) {
     (void)sig;
@@ -161,3 +162,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
